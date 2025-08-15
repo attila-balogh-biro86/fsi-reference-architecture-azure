@@ -24,6 +24,46 @@ The goal of this project is to design a scalable and secure online banking platf
 
 ### High availability and backup
 
+1. Design for Multi-Region Redundancy
+
+How:
+
+- Multiple AKS cluster deployments in different regions.
+- Front Door configuration: we can add both clusters to the same backend pool
+- Leverage health probes (HTTP/HTTPS) at the service level (e.g., /healthz (Spring Boot actuator)) so Front Door routes traffic only to healthy clusters.
+- It can be considered to build an active-active scenario to minimize latency or an active-passive setup for disaster recovery
+
+2. Zone Redundancy within Each Region
+
+How:
+
+- Leverage AKS with availability zones enabled, which helps eliminate the risk of region outage.
+- Node pools should spread across different availability zones.
+- Leverage a zone redundant load balancer (Standard SKU) for the AKS microservice layer (Kubernetes Service type).
+
+
+3. Application-Level Resilience
+
+How:
+
+- Leverage Kubernetes Deployments with replicas spread across zones.
+
+- Enable PodDisruptionBudgets to avoid too many pods going down during maintenance.
+
+- Implement liveness and readiness probes so Front Door sees unhealthy pods and routes traffic elsewhere.
+
+- Store state in redundant services (Azure SQL, Redis with geo-replication).
+
+4. Networking and Failover Mechanisms
+
+How:
+
+- We can expose AKS services via Azure Public Load Balancer (Standard SKU) or Azure Application Gateway Ingress Controller — these become the backend for Front Door.
+
+- Private Link if needed for security, but be aware of failover complexity.
+
+- Keep DNS TTLs low if we need to fallback to DNS-based routing
+
 
 ### Authentication and authorization
 
