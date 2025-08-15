@@ -1,10 +1,10 @@
-# FSI Azure AKS reference architecture
+# FSI reference architecture based on C64 and Azure AKS reference architecture
 
 ## Introduction
 
 The goal of this project is to design a scalable and secure online banking platform that supports account management, payments, user authentication, and audit logging. The solution should ensure high availability, modular design, and extensibility for future services.
 
-## System context
+## System context online banking system
 
 <img width="3633" height="1900" alt="diagram-export-8-15-2025-2_36_59-PM" src="https://github.com/user-attachments/assets/1dbd4fb1-23b6-483c-901a-9b5116ba8fcd" />
 
