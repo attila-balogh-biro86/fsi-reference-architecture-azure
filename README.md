@@ -15,11 +15,11 @@ The goal of this project is to design a scalable and secure online banking platf
 
 ## Component: Online banking system, backend component
 
+<img width="6950" height="3922" alt="diagram-export-8-15-2025-3_57_26-PM" src="https://github.com/user-attachments/assets/49b886a2-ff83-4253-b698-255b87374fb8" />
 
 ## Azure technical reference architecture
 
 <img width="5122" height="3024" alt="diagram-export-8-15-2025-1_56_37-PM" src="https://github.com/user-attachments/assets/3f9a9f34-f5b3-491b-9e72-2ae5f1d2bd47" />
-
 
 
 ### High availability and backup
