@@ -25,6 +25,8 @@ The goal of this project is to design a scalable and secure online banking platf
 ### High availability and backup
 
 1. Design for Multi-Region Redundancy
+   
+![aks-multi-cluster](https://github.com/user-attachments/assets/bf98cce0-50a3-4598-84ae-e1d826554916)
 
 How:
 
