@@ -69,8 +69,24 @@ How:
 
 ### Authentication and authorization
 
+https://learn.microsoft.com/en-us/azure/aks/azure-ad-rbac?tabs=portal
+
 
 ### Audit logging requirement
 
+The system needs to be able to log critical business events in a strongly consistent manner.
+This involves implementing an append-only audit log, which can be a basis for future audits as well.
+For this purpose, the main idea is to leverage Azure Confidential Ledger with the corresponding Java SDK.
+
+https://github.com/Azure/azure-sdk-for-java/tree/azure-security-confidentialledger_1.0.30/sdk/confidentialledger/azure-security-confidentialledger/src/samples
+
 
 ### Compliance requirements
+
+The following compliance requirements can arise based on the initial problem statements:
+
+- PCI DSS
+- GDPR
+- PSD2
+- ISO27001
+- SOX (Within US)
