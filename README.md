@@ -8,7 +8,7 @@ The goal of this project is to design a scalable and secure online banking platf
 
 <img width="3633" height="1900" alt="diagram-export-8-15-2025-2_36_59-PM" src="https://github.com/user-attachments/assets/1dbd4fb1-23b6-483c-901a-9b5116ba8fcd" />
 
-## Container: Online banking system
+## Container: Online banking backend
 
 <img width="4155" height="3181" alt="diagram-export-8-15-2025-3_18_53-PM" src="https://github.com/user-attachments/assets/e2636ed7-1520-43de-97dc-10fa2e4bcdd1" />
 
